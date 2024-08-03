@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fracciones</title>
+    <style>
+        .boton-chido {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #e91818;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+            cursor: pointer;
+        }
+
+        .boton-chido:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .boton-validar {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #28a745;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+            cursor: pointer;
+        }
+
+        .boton-validar:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+        }
+
+        .image-option {
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .image-option input {
+            display: none;
+        }
+
+        .image-option img {
+            border: 2px solid transparent;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: border-color 0.3s, transform 0.3s;
+        }
+
+        .image-option input:checked + img {
+            border-color: #28a745;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>HOLA RESUELVE EL SIGUIENTE PROBLEMA DE LA PIZZA</h1>
+        <br><br>
+        <form id="respuestaForm">
+            <div class="image-option">
+                <label>
+                    <input type="radio" name="respuesta" value="98">
+                    <img src="Img/pizza resouesta 1.png" width="200" height="200">
+                </label>
+            </div>
+            <div class="image-option">
+                <label>
+                    <input type="radio" name="respuesta" value="115">
+                    <img src="Img/pizza respuesta 2.png" width="200" height="200">
+                </label>
+            </div>
+            <div class="image-option">
+                <label>
+                    <input type="radio" name="respuesta" value="132">
+                    <img src="Img/pizza respuesta 3.png" width="200" height="200">
+                </label>
+            </div>
+            <div class="image-option">
+                <label>
+                    <input type="radio" name="respuesta" value="183">
+                    <img src="Img/pizza respuesta 4.png" width="200" height="200">
+                </label>
+            </div>
+            <br><br>
+            <button type="button" class="boton-validar" onclick="validarRespuesta()">Enviar</button>
+        </form>
+        <br>
+        <a href="index.html" class="boton-chido">Volver</a>
+    </center>
+    <script>
+        function validarRespuesta() {
+            const respuestaSeleccionada = document.querySelector('input[name="respuesta"]:checked');
+
+            if (!respuestaSeleccionada) {
+                alert('Debe seleccionar una opción');
+                return;
+            }
+
+            const respuesta = respuestaSeleccionada.value;
+
+            // Validar la respuesta correcta
+            if (respuesta === '183') {
+                window.location.href = 'SolucionesFinal.html';
+            } else {
+                alert('Respuesta incorrecta');
+            }
+        }
+    </script>
+</body>
+</html>
