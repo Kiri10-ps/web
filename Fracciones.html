@@ -47,13 +47,15 @@
 </head>
 <body>
     <center>
+        <h1>SELECCIONA, CUANTAS FRACCIONES DE PEDAZO DE PASTEL QUEDAN</h1>
+        <br><br>
         <img src="Img/Pastel.jpg" width="700" height="300">
         <br><br>
         <form id="respuestaForm">
-            <button type="button" class="boton-respuesta" onclick="validarRespuesta('98')">98</button>
-            <button type="button" class="boton-respuesta" onclick="validarRespuesta('115')">115</button>
-            <button type="button" class="boton-respuesta" onclick="validarRespuesta('132')">132</button>
-            <button type="button" class="boton-respuesta" onclick="validarRespuesta('183')">183</button>
+            <button type="button" class="boton-respuesta" onclick="validarRespuesta('98')">2/3</button>
+            <button type="button" class="boton-respuesta" onclick="validarRespuesta('115')">4/5</button>
+            <button type="button" class="boton-respuesta" onclick="validarRespuesta('132')">3/4</button>
+            <button type="button" class="boton-respuesta" onclick="validarRespuesta('183')">3/5</button>
         </form>
         <br>
         <a href="index.html" class="boton-chido">Volver</a>
@@ -61,7 +63,7 @@
     <script>
         function validarRespuesta(respuesta) {
             // Validar la respuesta correcta
-            if (respuesta === '115') {
+            if (respuesta === '132') {
                 window.location.href = 'Fracciones2.html';
             } else {
                 alert('Respuesta incorrecta');

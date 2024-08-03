@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sucesiones</title>
+    <title>Geometrizate</title>
     <style>
         .boton-chido {
             display: inline-block;
@@ -24,48 +24,51 @@
             transform: scale(1.05);
         }
 
-        .boton-validar {
+        .boton-respuesta {
             display: inline-block;
             padding: 10px 20px;
             font-size: 16px;
             color: #fff;
-            background-color: #28a745;
+            background-color: #2c26d8;
             border: none;
             border-radius: 5px;
             text-align: center;
             text-decoration: none;
             transition: background-color 0.3s, transform 0.3s;
             cursor: pointer;
+            margin: 10px;
         }
 
-        .boton-validar:hover {
+        .boton-respuesta:hover {
             background-color: #218838;
             transform: scale(1.05);
-        }
-
-        .input-chido {
-            width: 200px;
-            padding: 10px;
-            margin: 10px 0;
-            box-sizing: border-box;
-            border: 2px solid #ccc;
-            border-radius: 5px;
-            transition: border-color 0.3s, box-shadow 0.3s;
-            font-size: 16px;
-        }
-
-        .input-chido:focus {
-            border-color: #28a745;
-            box-shadow: 0 0 10px rgba(40, 167, 69, 0.2);
-            outline: none;
         }
     </style>
 </head>
 <body>
     <center>
-        <img src="Img/FELICIDADES.jpg" width="700" height="400">
+        <h1>¿DE QUE COLOR ES EL HEXAGONO?</h1>
         <br><br>
+        <img src="Img/figuras FINAL.webp" width="700" height="300">
+        <br><br>
+        <form id="respuestaForm">
+            <button type="button" class="boton-respuesta" onclick="validarRespuesta('98')">Verde</button>
+            <button type="button" class="boton-respuesta" onclick="validarRespuesta('115')">Rojo</button>
+            <button type="button" class="boton-respuesta" onclick="validarRespuesta('132')">Azul</button>
+            <button type="button" class="boton-respuesta" onclick="validarRespuesta('183')">Amarillo</button>
+        </form>
+        <br>
         <a href="index.html" class="boton-chido">Volver</a>
     </center>
+    <script>
+        function validarRespuesta(respuesta) {
+            // Validar la respuesta correcta
+            if (respuesta === '132') {
+                window.location.href = 'Geometrizate2.html';
+            } else {
+                alert('Respuesta incorrecta');
+            }
+        }
+    </script>
 </body>
 </html>

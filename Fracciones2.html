@@ -47,13 +47,15 @@
 </head>
 <body>
     <center>
-        <img src="Img/pizza.jpg" width="700" height="300">
+        <h1>SELECCIONA LA RESPUESTA CORRECTA</h1>
+        <br><br>
+        <img src="Img/Pizza lentes.jpg" width="700" height="300">
         <br><br>
         <form id="respuestaForm">
-            <button type="button" class="boton-respuesta" onclick="validarRespuesta('98')">98</button>
-            <button type="button" class="boton-respuesta" onclick="validarRespuesta('115')">115</button>
-            <button type="button" class="boton-respuesta" onclick="validarRespuesta('132')">132</button>
-            <button type="button" class="boton-respuesta" onclick="validarRespuesta('183')">183</button>
+            <button type="button" class="boton-respuesta" onclick="validarRespuesta('98')">1 2/5</button>
+            <button type="button" class="boton-respuesta" onclick="validarRespuesta('115')">6/8</button>
+            <button type="button" class="boton-respuesta" onclick="validarRespuesta('132')">4/6</button>
+            <button type="button" class="boton-respuesta" onclick="validarRespuesta('183')">5/5</button>
         </form>
         <br>
         <a href="index.html" class="boton-chido">Volver</a>
@@ -61,7 +63,7 @@
     <script>
         function validarRespuesta(respuesta) {
             // Validar la respuesta correcta
-            if (respuesta === '115') {
+            if (respuesta === '98') {
                 window.location.href = 'Fracciones3.html';
             } else {
                 alert('Respuesta incorrecta');
